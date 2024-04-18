@@ -1,0 +1,12 @@
+# Ignore build output
+build/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore vite's build output directory
+dist/
+
+# Ignore IDE and editor-specific directories
+.idea/
+.vscode/
