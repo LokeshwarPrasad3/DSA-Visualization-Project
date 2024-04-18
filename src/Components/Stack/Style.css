@@ -1,0 +1,104 @@
+.stack_button {
+  width: 4rem;
+  padding: 5px 14px;
+  height: 33px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+/* 
+
+.stack_container {
+        margin: 1rem 0;
+      }
+      .main_content {
+        display: flex;
+        margin-top: 3rem;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+      }
+      .stack_visualize_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100vh;
+      }
+      .content_visualization{
+        height: 100%;
+      }
+      .stack_container .heading {
+        text-align: center;
+      }
+      .operations {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      button {
+        padding: 5px 14px;
+        height: 33px;
+        font-size: 1.1rem;
+        border: none;
+        cursor: pointer;
+      }
+      .push_button {
+        background-color: green;
+      }
+      .pop_button {
+        background-color: rgb(241, 70, 70);
+      }
+      .top_button {
+        background-color: rgb(93, 93, 243);
+      }
+      .push-input {
+        height: 33px;
+        width: 60px;
+        padding: 0.4rem;
+        border: 1px solid gray;
+        font-family: "signika negative";
+        font-size: 1.2rem;
+      }
+      .push-input:focus {
+        outline: none;
+      }
+      .show-visualization {
+        margin-top: 9rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+      }
+      .empty_stack {
+        margin-top: 7rem;
+      }
+      .empty_stack,
+      .stack {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        width: 100px;
+        height: 50px;
+        border: 2px solid white;
+        border-top: none;
+      }
+
+      .number-push-container {
+        font-size: 1.8rem;
+        position: absolute;
+        top: 9vh;
+        left: 38vw;
+      }
+
+      .docs_container_part {
+        height: 100vh;
+        width: 30vw;
+      }
+      .stack_menu_container {
+        border: 2px solid white;
+        height: 100%;
+      } */
