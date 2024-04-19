@@ -1,35 +1,37 @@
 export const codeStringSTL = `🚀//STL IMPLEMENTATION
 #include <iostream>
 #include <stack>
+using namespace std;
 
 int main() {
     // Create a stack of integers
-    std::stack<int> st;
+    stack<int> st;
 
     // Push elements onto the stack
     st.push(10);
     st.push(20);
     st.push(30);
     // Print the top element of the stack
-    std::cout << "Top element of the stack: " << st.top() << std::endl;
+    cout << "Top element of the stack: " << st.top() << endl;
 
     // Pop an element from the stack
     st.pop();
     // Print the top element after popping
-    std::cout << "Top element of the stack after popping: " << st.top() << std::endl;
+    cout << "Top element of the stack after popping: " << st.top() << endl;
 
     // Check if the stack is empty
     if (st.empty()) {
-        std::cout << "Stack is empty" << std::endl;
+        cout << "Stack is empty" << endl;
     } else {
-        std::cout << "Stack is not empty" << std::endl;
+        cout << "Stack is not empty" << endl;
     }
 
     // Print the size of the stack
-    std::cout << "Size of the stack: " << st.size() << std::endl;
+    cout << "Size of the stack: " << st.size() << endl;
 
     return 0;
 }
+
 
 `;
 
@@ -97,35 +99,36 @@ int main() {
 
 `;
 
-export const Documentation = `
-# Stack Data Structure Documentation
+export const Documentation = `# Stack Overview
 
-## Overview
+A stack is a Last In, First Out (LIFO) linear data structure.
+It's used in various algorithms and applications where elements are
+processed in a last-in-first-out manner.
 
-A stack is a linear data structure that follows the Last In, First Out (LIFO) principle.
-It means that the element inserted last is the first element to be removed.
-The stack is used in various algorithms and applications where elements are to be processed
-in a last-in-first-out manner.
+# Operations :
 
-## Operations
+1. Push
+   - Description: Adds an element to the top.
+   - Syntax: void push(const T& value);
 
-1. **Push**
-   - **Description:** Adds an element to the top of the stack.
-   - **Syntax:** void push(const T& value); 
+2. Pop
+   - Description: Removes the top element.
+   - Syntax: void pop();
 
-2. **Pop**
-   - **Description:** Removes the top element from the stack.
-   - **Syntax:** void pop(); 
+3. Top
+   - Description: Returns a reference to the top element.
+   - Syntax: T & top();
 
-3. **Top**
-   - **Description:** Returns a reference to the top element of the stack.
-   - **Syntax:** T & top(); 
+4. Size
+   - Description: Returns the number of elements.
+   - Syntax: size_t size() const ;
 
-4. **Size**
-   - **Description:** Returns the number of elements in the stack.
-   - **Syntax:** size_t size() const ; 
+5. Empty
+   - Description: Checks if the stack is empty.
+   - Syntax: bool empty() const ;
 
-5. **Empty**
-   - **Description:** Checks if the stack is empty.
-   - **Syntax:** bool empty() const ;
+Overflow: Adding to a full stack may lead to data loss or instability.
+
+Underflow: Removing from an empty stack may cause errors or unexpected behavior.
+
 `;

@@ -30,44 +30,44 @@ const Docs = () => {
   // shadow-sm shadow-blue-600
   return (
     <>
-      <div className="docs_container_part h-screen w-[50vw] font-overpass">
+      <div className="docs_container_part h-screen w-[96vw] md:w-[60vw] font-overpass ">
         <div
-          className="stack_menu_container h-[80vh] shadow-sm shadow-blue-600
+          className="stack_menu_container h-[80vh] 
         "
         >
           <ul className="menu_list flex gap-3">
             <li
               onClick={() => showStackDescription(1)}
-              className="shadow-sm shadow-blue-700 cursor-pointer hover:bg-blue-900 hover:shadow-sm hover:shadow-blue-600 px-3 transition-all duration-200"
+              className="bg-slate-700 text-lg shadow-sm pt-1 shadow-blue-700 cursor-pointer hover:bg-blue-900 hover:shadow-sm hover:shadow-blue-600 px-3 transition-all duration-200"
             >
               Docs
             </li>
             <li
               onClick={() => showStackDescription(2)}
-              className="shadow-sm shadow-blue-700 cursor-pointer hover:bg-blue-900 hover:shadow-sm hover:shadow-blue-600 px-3 transition-all duration-200"
+              className="bg-slate-700 text-lg shadow-sm pt-1 shadow-blue-700 cursor-pointer hover:bg-blue-900 hover:shadow-sm hover:shadow-blue-600 px-3 transition-all duration-200"
             >
               STL
             </li>
             <li
               onClick={() => showStackDescription(3)}
-              className="shadow-sm shadow-blue-700 cursor-pointer hover:bg-blue-900 hover:shadow-sm hover:shadow-blue-600 px-3 transition-all duration-200"
+              className="bg-slate-700 text-lg shadow-sm pt-1 shadow-blue-700 cursor-pointer hover:bg-blue-900 hover:shadow-sm hover:shadow-blue-600 px-3 transition-all duration-200"
             >
               Implement
             </li>
           </ul>
-          <div className="content_by_menu flex justify-center">
+          <div className="content_by_menu text-[0.9rem] flex justify-center">
             {showDocs && (
-              <div className="show_code w-full h-full font-overpass">
+              <div className="show_code w-full h-full font-overpass shadow-sm shadow-blue-200">
                 <CodePreviewer codeString={Documentation} />
               </div>
             )}
             {showSTL && (
-              <div className="show_code w-full h-full font-overpass">
+              <div className="show_code w-full h-full font-overpass shadow-sm shadow-blue-200">
                 <CodePreviewer codeString={codeStringSTL} />
               </div>
             )}
             {showImplementation && (
-              <div className="show_code w-full h-full font-overpass">
+              <div className="show_code w-full h-full font-overpass shadow-sm shadow-blue-200">
                 <CodePreviewer codeString={codeStringImplementation} />
               </div>
             )}

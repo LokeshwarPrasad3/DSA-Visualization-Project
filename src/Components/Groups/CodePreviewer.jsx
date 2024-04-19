@@ -6,7 +6,7 @@ const CodePreviewer = ({ codeString }) => {
   const customStyle = {
     ...dracula,
     maxHeight: "100%",
-    overflowY: "auto"
+    overflowY: "auto",
   };
 
 

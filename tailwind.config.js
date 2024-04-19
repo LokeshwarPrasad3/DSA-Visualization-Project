@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         'overpass': ['overpass'],
-        'signika' : ['signika negative']
+        'signika': ['signika negative'],
+        'jetbrains': ['JetBrains+Mono'],
       }
     },
   },

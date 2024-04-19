@@ -78,7 +78,7 @@ const StackVisualize = () => {
   // 2. Pop value from Stack
   const popValueFromStack = () => {
      if (currentStack.length===0) {
-       toast.error("Stack is empty!!");
+       toast.error("Your Stack is empty!!");
        return;
      }
      const popedChild = AllStackParent.firstChild;
@@ -109,7 +109,7 @@ const StackVisualize = () => {
   // 3. Show top of stack
   const showTopOfStack = () => {
     if (currentStack.length === 0) {
-      toast.error("Stack is empty!!");
+      toast.error("Your Stack is empty!!");
       return;
     }
     const TopElement = AllStackParent.firstElementChild;
@@ -150,16 +150,16 @@ const StackVisualize = () => {
 
   return (
     <>
-      <div className="stack_visualize_container flex justify-center flex-col flex-wrap h-screen ">
-        <div className="content_visualization h-full">
-          <div className="operations flex justify-center items-center gap-4">
+      <div className="stack_visualize_container flex flex-col flex-wrap h-auto md:h-screen ">
+        <div className="content_visualization h-full mb-12">
+          <div className="operations mt-5 flex justify-center items-center gap-4">
             <div
               ref={numberContainerRef}
               className="number-push-container text-[1.8rem] absolute top-[9vh] left-[38vw]"
             ></div>
             <div className="push-operation flex justify-center items-center gap-1">
               <input
-                onKeyDown={()=>pushValueToStack}
+                onKeyDown={() => pushValueToStack}
                 ref={inputRef}
                 onChange={(e) => setInputPushValue(e.target.value)}
                 value={inputPushValue}
@@ -186,7 +186,9 @@ const StackVisualize = () => {
             <div className="top-operation">
               <button
                 onClick={showTopOfStack}
-                id="topButton" className="stack_button bg-blue-600">
+                id="topButton"
+                className="stack_button bg-blue-600"
+              >
                 Top
               </button>
             </div>
@@ -194,7 +196,7 @@ const StackVisualize = () => {
 
           <div
             ref={AllStackParentRef}
-            className="show-visualization mt-44 flex items-center w-full flex-col"
+            className="show-visualization mt-20 md:mt-44 flex items-center w-full flex-col"
           >
             {/* stack box pushed dynamically here */}
             {currentStack.map((stack, index) => {
@@ -211,7 +213,7 @@ const StackVisualize = () => {
             <div
               ref={emptyStackRef}
               className={`empty_stack ${
-                currentStack.length === 0 ? "flex" : "hidden"
+                currentStack.length === 0 ? 'flex' : 'hidden'
               } justify-center items-center text-[2rem] w-24 h-12 border-2 border-white border-t-0`}
             ></div>
           </div>
