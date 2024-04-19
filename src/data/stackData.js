@@ -1,4 +1,4 @@
-export const codeStringSTL = `🚀//STL IMPLEMENTATION
+export const codeStringSTL = `//🚀STL IMPLEMENTATION
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -35,7 +35,7 @@ int main() {
 
 `;
 
-export const codeStringImplementation = `🚀//CODE IMPLEMENTATION
+export const codeStringImplementation = `//🚀CODE IMPLEMENTATION
 #include <iostream>
 
 #define MAX_SIZE 1000
