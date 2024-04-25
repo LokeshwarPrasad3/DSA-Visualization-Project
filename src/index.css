@@ -5,3 +5,14 @@
 * {
   color: white;
 }
+
+.custom_button {
+  @apply px-3 bg-green-700 hover:bg-green-600 rounded transition-all duration-300 text-[1rem] border-none cursor-pointer;
+}
+
+.flex-3 {
+  @apply flex justify-center items-center;
+}
+.flex-4 {
+  @apply flex flex-col justify-center items-center;
+}
