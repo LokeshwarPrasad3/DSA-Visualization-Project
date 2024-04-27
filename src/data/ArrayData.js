@@ -99,3 +99,8 @@ Overflow: Adding to a full array may require resizing the array, which can be co
 Underflow: Removing from an empty array may cause errors or unexpected behavior.
 
 `;
+
+export const SelectOptionArrayInputTypes = [
+   { type: "Number" },
+   { type: "Character" },
+]
