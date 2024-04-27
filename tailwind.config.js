@@ -10,6 +10,8 @@ export default {
         'overpass': ['overpass'],
         'signika': ['signika negative'],
         'jetbrains': ['JetBrains+Mono'],
+        'bree': ['bree serif'],
+        'mont': ['Montserrat'],
       }
     },
   },

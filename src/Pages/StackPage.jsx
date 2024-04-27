@@ -6,8 +6,8 @@ const StackPage = () => {
   return (
     <>
       <div className="stack_container mt-10">
-        <h1 className="heading text-center text-3xl font-bold font-overpass">
-          Stack Visualization
+        <h1 className="heading text-center text-2xl font-overpass">
+          🚀 Stack Visualization
         </h1>
         <MainContent />
       </div>

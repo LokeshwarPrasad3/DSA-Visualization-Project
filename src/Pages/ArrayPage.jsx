@@ -141,19 +141,19 @@ const ArrayPage = () => {
   return (
     <>
       <div className="array_container cursor-pointer mt-10">
-        <h1 className="heading text-center text-3xl font-bold font-overpass">
-          Array Visualization
+        <h1 className="heading text-center text-2xl font-overpass">
+          🚀 Array Visualization
         </h1>
         <div className="array_main_content  flex flex-col md:flex-row mt-12 justify-around items-center w-full ">
           <div className="array_visualize_container flex gap-6 flex-col flex-wrap my-12 h-auto md:h-screen ">
             <div className="array_inputs flex-3 flex-col gap-3">
               {toggleInputToText ? (
                 <div>
-                  <p className="focus:outline-none bg-slate-900 border-[1px] border-gray-600 pl-2 w-36 text-center">
+                  <p className="focus:outline-none bg-slate-900 border-[1px] border-gray-600 pl-2 w-56 text-center">
                     <span className="opacity-70">Type :</span>{' '}
                     <span className="opacity-80">{inputArrayType}</span>
                   </p>
-                  <p className="focus:outline-none bg-slate-900 border-[1px] border-gray-600 pl-2 w-36 text-center">
+                  <p className="focus:outline-none bg-slate-900 border-[1px] border-gray-600 pl-2 w-56 text-center">
                     <span className="opacity-70">Size :</span>{' '}
                     <span className="opacity-70">{inputArraySize}</span>
                   </p>
@@ -163,7 +163,7 @@ const ArrayPage = () => {
                   <select
                     onChange={(e) => setInputArrayType(e.target.value)}
                     value={inputArrayType}
-                    className="focus:outline-none opacity-80 bg-slate-900 border-[1px] border-gray-600 pl-2 w-36 text-white "
+                    className="focus:outline-none opacity-80 bg-slate-900 border-[1px] border-gray-600 pl-2 w-56 text-xl text-white "
                   >
                     {SelectOptionArrayInputTypes.map(({ type }) => (
                       <option className="" key={type} value={type}>
@@ -172,7 +172,7 @@ const ArrayPage = () => {
                     ))}
                   </select>
                   <input
-                    className="focus:outline-none bg-slate-900 border-[1px] border-gray-600 pl-2 w-36 "
+                    className="focus:outline-none text-xl bg-slate-900 border-[1px] border-gray-600 pl-2 w-56 "
                     type="number"
                     value={inputArraySize}
                     onChange={(e) =>
@@ -186,7 +186,7 @@ const ArrayPage = () => {
               )}
               <button
                 onClick={handleCreateArray}
-                className="custom_button text-[1rem] "
+                className="custom_button text-[1rem] mt-4"
               >
                 {resetArray ? 'Reset' : 'Create'}
               </button>
