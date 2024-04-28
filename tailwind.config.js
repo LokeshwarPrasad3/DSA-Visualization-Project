@@ -11,7 +11,8 @@ export default {
         'signika': ['signika negative'],
         'jetbrains': ['JetBrains+Mono'],
         'bree': ['bree serif'],
-        'mont': ['Montserrat'],
+        'karla': ['Karla'],
+        'raleway': ['Raleway'],
       }
     },
   },

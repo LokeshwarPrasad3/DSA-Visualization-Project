@@ -1,17 +1,17 @@
 const MainViewPort = () => {
   return (
-    <div className="bg-gray-950 h-full flex justify-center font-mont items-center">
-      <div className="main_content_container bg-gray-950 pt-40 shadow-blue-400 rounded-lg p-8">
-        <div className="main_title_description flex-3 flex-col">
-          <h2 className=" flex-3 flex-col gap-6 md:text-5xl lg:text-6xl text-center font-bold text-gray-200 mb-4">
-            <h2 className="text-[3rem] md:text-[4rem]">
+    <div className="bg-gray-950 h-full flex justify-center font-signika items-center">
+      <div className="main_content_container bg-gray-950 px-8 pt-14 sm:pt-32 md:pt-40 xl:pt-40 2xl:pt-40 shadow-blue-400 rounded-lg">
+        <div className="main_title_description flex-3 flex-col font-overpass">
+          <h2 className=" flex-3 flex-col text-center font-bold text-gray-200">
+            <h2 className="text-[2.5rem] md:text-[4rem]">
               Transform Your DSA Learning
             </h2>
-            <span className="text-[3rem] md:text-[4rem] bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+            <span className="text-[2.4rem] md:text-[3.9rem] bg-clip-text text-transparent bg-gradient-to-r from-[#7186ff] to-[#fe7587]">
               Through Visualization
             </span>
           </h2>
-          <p className="text-xl mt-[1.5rem] w-[80%] text-gray-300 text-center">
+          <p className="text-xl mt-[1.5rem] md:w-[80%] text-gray-300 text-center">
             Experience a transformative approach to DSA learning through
             immersive visualizations, simplifying intricate concepts for deeper
             comprehension and mastery
