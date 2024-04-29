@@ -18,12 +18,20 @@ const MainViewPort = () => {
           </p>
         </div>
         <div className="button_container flex justify-center mt-16">
-          <button className="bg-transparent border border-slate-300 text-blue-500 px-6 py-2 rounded-md mr-4 hover:bg-slate-900 hover:text-white focus:outline-none">
+          <a
+            href="https://github.com/LokeshwarPrasad3"
+            target="_blank"
+            className="cursor-pointer bg-transparent border border-slate-300 text-blue-500 px-6 py-2 rounded-md mr-4 hover:bg-slate-900 hover:text-white focus:outline-none"
+          >
             GitHub Code
-          </button>
-          <button className="bg-transparent border border-slate-300 text-blue-500 px-6 py-2 rounded-md hover:bg-slate-900 hover:text-white focus:outline-none">
+          </a>
+          <a
+            href="https://lokeshwar-creatives.netlify.app"
+            target="_blank"
+            className="cursor-pointer bg-transparent border border-slate-300 text-blue-500 px-6 py-2 rounded-md hover:bg-slate-900 hover:text-white focus:outline-none"
+          >
             Creator
-          </button>
+          </a>
         </div>
       </div>
     </div>
