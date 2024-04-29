@@ -144,7 +144,7 @@ const ArrayPage = () => {
         <h1 className="heading text-center text-2xl font-overpass">
           🚀 Array Visualization
         </h1>
-        <div className="array_main_content  flex flex-col md:flex-row mt-12 justify-around items-center w-full ">
+        <div className="array_main_content font-overpass flex flex-col md:flex-row mt-12 justify-around items-center w-full ">
           <div className="array_visualize_container flex gap-6 flex-col flex-wrap my-12 h-auto md:h-screen ">
             <div className="array_inputs flex-3 flex-col gap-3">
               {toggleInputToText ? (

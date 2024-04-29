@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { useEffect, useRef, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const StackVisualize = () => {
   // for always focus on input
@@ -8,30 +8,27 @@ const StackVisualize = () => {
   const AllStackParentRef = useRef(null);
   const emptyStackRef = useRef(null);
 
-  // current element 
+  // current element
   const numberContainer = numberContainerRef.current;
   const AllStackParent = AllStackParentRef.current;
   const emptyStack = emptyStackRef.current;
 
-
   // input for push value in stack
-  const [inputPushValue, setInputPushValue] = useState("");
+  const [inputPushValue, setInputPushValue] = useState('');
   // all stack to be display
   const [currentStack, setCurrentStack] = useState([]);
-
 
   // -------- FUNCTIONS DEFINED HERE ----------
   // 1. Push Values to Stack
   const pushValueToStack = () => {
-    
-    if (inputPushValue === "") {
-      toast.error("Enter Right Value");
+    if (inputPushValue === '') {
+      toast.error('Enter Right Value');
       inputRef.current.focus();
       return;
     }
     // push value to array currentStack
     const numberToPush = inputPushValue;
-    setInputPushValue("");
+    setInputPushValue('');
     setTimeout(() => {
       setCurrentStack((prev) => [numberToPush, ...prev]);
       inputRef.current.focus();
@@ -39,14 +36,14 @@ const StackVisualize = () => {
 
     // Reset the position and display properties of the number container
     numberContainer.innerHTML = inputPushValue;
-    numberContainer.style.transition = "none"; // Remove any existing transition
-    numberContainer.style.display = "block"; // Ensure the number container is visible
-    numberContainer.style.transform = ""; // Reset any previous transform
+    numberContainer.style.transition = 'none'; // Remove any existing transition
+    numberContainer.style.display = 'block'; // Ensure the number container is visible
+    numberContainer.style.transform = ''; // Reset any previous transform
 
     // Get the target element
     let targetElement = AllStackParent.firstElementChild;
     if (!targetElement) {
-      console.log("nahi hai")
+      console.log('nahi hai');
       targetElement = emptyStack;
     }
 
@@ -56,10 +53,11 @@ const StackVisualize = () => {
     // Calculate the distance to move relative to the current position of the number container
     const deltaX =
       targetRect.left - numberContainer.getBoundingClientRect().left;
-    const deltaY = (targetRect.top - 10) - numberContainer.getBoundingClientRect().top;
+    const deltaY =
+      targetRect.top - 10 - numberContainer.getBoundingClientRect().top;
 
     // Apply transition to animate the movement
-    numberContainer.style.transition = "transform 1s ease-out";
+    numberContainer.style.transition = 'transform 1s ease-out';
 
     // Move the number container to the target position
     requestAnimationFrame(() => {
@@ -70,56 +68,59 @@ const StackVisualize = () => {
 
     // Remove the transition and hide the number container after 1 second
     setTimeout(() => {
-      numberContainer.style.transition = "none";
-      numberContainer.style.display = "none";
+      numberContainer.style.transition = 'none';
+      numberContainer.style.display = 'none';
     }, 1000);
   };
 
   // 2. Pop value from Stack
   const popValueFromStack = () => {
-     if (currentStack.length===0) {
-       toast.error("Your Stack is empty!!");
-       return;
-     }
-     const popedChild = AllStackParent.firstChild;
+    if (currentStack.length === 0) {
+      toast.error('Your Stack is empty!!');
+      return;
+    }
+    const popedChild = AllStackParent.firstChild;
+    // const noOfChild = AllStackParent.childElementCount;
+    // console.log(noOfChild);
 
-     const newNumberElement = document.createElement("span");
-     newNumberElement.style.fontSize = "2rem";
-     newNumberElement.style.position = "relative";
-     newNumberElement.style.transition = "all 1s ease-out";
-     newNumberElement.textContent = popedChild.textContent;
-     popedChild.textContent = "";
-     popedChild.appendChild(newNumberElement);
+    const newNumberElement = document.createElement('span');
+    newNumberElement.style.fontSize = '2rem';
+    newNumberElement.style.position = 'relative';
+    newNumberElement.style.transition = 'all 1s ease-out';
+    newNumberElement.textContent = popedChild.textContent;
+    popedChild.textContent = '';
+    popedChild.appendChild(newNumberElement);
 
-     // Move the number container to the target position
-     requestAnimationFrame(() => {
-       newNumberElement.style.transform = "translateY(-200px)";
-     });
+    // Move the number container to the target position
+    requestAnimationFrame(() => {
+      newNumberElement.style.transform = 'translateY(-200px)';
+    });
 
-     setTimeout(() => {
-       if (popedChild) {
-         AllStackParent.removeChild(popedChild);
-         if (AllStackParent.childElementCount === 0) {
-           emptyStack.style.display = "block";
-         }
-       }
-     }, 1000);
-  }
+    setTimeout(() => {
+      if (popedChild) {
+        setCurrentStack((prevStack) => prevStack.slice(1));
+
+        if (AllStackParent.childElementCount === 1) {
+          console.log(AllStackParent.childElementCount);
+          emptyStack.style.display = 'block';
+        }
+      }
+    }, 1000);
+  };
 
   // 3. Show top of stack
   const showTopOfStack = () => {
     if (currentStack.length === 0) {
-      toast.error("Your Stack is empty!!");
+      toast.error('Your Stack is empty!!');
       return;
     }
     const TopElement = AllStackParent.firstElementChild;
     // console.log(TopElement)
-    TopElement.style.background = "rgb(93, 93, 243)";
+    TopElement.style.background = 'rgb(93, 93, 243)';
     setTimeout(() => {
-      TopElement.style.background = "none";
+      TopElement.style.background = 'none';
     }, 1000);
   };
-
 
   useEffect(() => {
     const setPositionOfAnimatedNumber = () => {
@@ -131,26 +132,26 @@ const StackVisualize = () => {
       const containerLeft = pushInputRect.left + 20;
 
       // Apply CSS styles to position the number container
-      numberContainer.style.position = "absolute";
-      numberContainer.style.top = containerTop + "px";
-      numberContainer.style.left = containerLeft + "px";
+      numberContainer.style.position = 'absolute';
+      numberContainer.style.top = containerTop + 'px';
+      numberContainer.style.left = containerLeft + 'px';
     };
 
     // Event listener for window resize (in case the position needs to be recalculated)
-    window.addEventListener("resize", setPositionOfAnimatedNumber);
+    window.addEventListener('resize', setPositionOfAnimatedNumber);
 
     // Call the function to position the number container initially
     setPositionOfAnimatedNumber();
 
     // Clean up event listener on component unmount
     return () => {
-      window.removeEventListener("resize", setPositionOfAnimatedNumber);
+      window.removeEventListener('resize', setPositionOfAnimatedNumber);
     };
   }, []);
 
   return (
     <>
-      <div className="stack_visualize_container flex flex-col flex-wrap h-auto md:h-screen ">
+      <div className="stack_visualize_container flex flex-col flex-wrap h-auto md:h-screen font-overpass">
         <div className="content_visualization h-full mb-12">
           <div className="operations mt-5 flex justify-center items-center gap-4">
             <div
