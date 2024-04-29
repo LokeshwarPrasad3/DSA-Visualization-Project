@@ -163,7 +163,7 @@ const ArrayPage = () => {
                   <select
                     onChange={(e) => setInputArrayType(e.target.value)}
                     value={inputArrayType}
-                    className="focus:outline-none opacity-80 bg-slate-900 border-[1px] border-gray-600 pl-2 w-56 text-xl text-white "
+                    className="focus:outline-none  bg-slate-900 border-[1px] border-gray-600 pl-2 w-56 text-xl text-white "
                   >
                     {SelectOptionArrayInputTypes.map(({ type }) => (
                       <option className="" key={type} value={type}>

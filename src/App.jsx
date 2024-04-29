@@ -1,4 +1,5 @@
 import Navbar from './Components/Navbar';
+import Navbar1 from './Components/Navbar1';
 import WorkingHomePage from './Components/WorkingHomePage';
 import ArrayPage from './Pages/ArrayPage';
 import HomePage from './Pages/HomePage';
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navbar1 />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/stack" element={<StackPage />} />

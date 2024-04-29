@@ -1,0 +1,100 @@
+.custom-transition {
+  transition: all 0.5s ease-in;
+}
+
+#navbar {
+  z-index: 1; /* Use a whole number for z-index */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  width: 100%; /* Use width instead of min-width */
+}
+
+.navbar_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+.heading_logo {
+  text-transform: none;
+}
+.navbar_header img {
+  height: 3rem;
+}
+
+/* menu bar */
+#navbar_menu {
+  display: flex;
+  align-items: center;
+}
+#nav_ul {
+  display: flex;
+  gap: 0;
+  font-weight: 500;
+}
+.nav_list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_link {
+  font-size: 1.1rem;
+  padding: 1px 10px;
+  cursor: pointer;
+  color: white;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: 0.2s all ease-in;
+}
+
+.menu_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* remix icon */
+.ri-menu-fill,
+.ri-close-line {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #navbar_menu {
+    position: absolute;
+    top: 6.3rem;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1e3a8a;
+    --tw-bg-opacity: 1;
+    background-color: rgb(3 7 18 / var(--tw-bg-opacity));
+    transition: all 0.2s ease-in-out;
+  }
+  #nav_ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  #nav_ul .nav_list {
+    width: 100%;
+    border-bottom: 1px solid #1e3a8a;;
+  }
+  #nav_ul .nav_list a {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+    margin: 0.8rem 0;
+    text-align: left;
+    width: 100%;
+  }
+  #nav_ul .nav_list a:hover {
+    color: red;
+  }
+}
