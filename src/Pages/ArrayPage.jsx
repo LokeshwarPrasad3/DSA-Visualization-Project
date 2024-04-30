@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import Docs from '../Components/Array/ArrayDocs';
 import toast, { Toaster } from 'react-hot-toast';
 import { SelectOptionArrayInputTypes } from '../data/ArrayData';
+import {
+  codeStringImplementation,
+  codeStringSTL,
+  Documentation,
+} from '../data/ArrayData';
+import Docs from '../Components/Stack/Docs';
 
 const ArrayPage = () => {
   // get size of array creation
@@ -144,7 +149,7 @@ const ArrayPage = () => {
         <h1 className="heading text-center text-2xl font-overpass">
           🚀 Array Visualization
         </h1>
-        <div className="array_main_content font-overpass flex flex-col md:flex-row mt-12 justify-around items-center w-full ">
+        <div className="array_main_content font-overpass flex flex-col md:flex-row justify-around items-center w-full ">
           <div className="array_visualize_container flex gap-6 flex-col flex-wrap my-12 h-auto md:h-screen ">
             <div className="array_inputs flex-3 flex-col gap-3">
               {toggleInputToText ? (
@@ -231,7 +236,11 @@ const ArrayPage = () => {
             </div>
           </div>
           <div className="array_docs_container">
-            <Docs />
+            <Docs
+              codeStringImplementation={codeStringImplementation}
+              codeStringSTL={codeStringSTL}
+              Documentation={Documentation}
+            />
           </div>
         </div>
       </div>

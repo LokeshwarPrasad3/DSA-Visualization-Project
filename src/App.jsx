@@ -5,12 +5,12 @@ import HomePage from './Pages/HomePage';
 import StackPage from './Pages/StackPage';
 import { Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import QueuePage from './Pages/QueuePage';
 
 function App() {
   const location = useLocation();
 
   const workingRoutes =
-    location.pathname === '/queue' ||
     location.pathname === '/linked-list' ||
     location.pathname === '/tree' ||
     location.pathname === '/graph';
@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/stack" element={<StackPage />} />
         <Route exact path="/array" element={<ArrayPage />} />
+        <Route exact path="/queue" element={<QueuePage />} />
       </Routes>
       {workingRoutes && <WorkingHomePage />}
     </>

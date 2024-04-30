@@ -1,14 +1,9 @@
 import CodePreviewer from '../Groups/CodePreviewer';
-import {
-  codeStringImplementation,
-  codeStringSTL,
-  Documentation,
-} from '../../data/stackData';
 import { useState } from 'react';
 import { useRef } from 'react';
 import toast from 'react-hot-toast';
 
-const Docs = () => {
+const Docs = ({ codeStringImplementation, codeStringSTL, Documentation }) => {
   const copiedTextRef = useRef(null);
 
   const [showDocs, setShowDocs] = useState(true);
