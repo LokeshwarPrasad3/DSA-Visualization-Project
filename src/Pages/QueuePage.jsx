@@ -1,4 +1,4 @@
-import QueueMainContent from "../Components/Queue/QueueMainContent"
+import QueueMainContent from '../Components/Queue/QueueMainContent';
 
 const QueuePage = () => {
   return (
@@ -11,6 +11,6 @@ const QueuePage = () => {
       </div>
     </>
   );
-}
+};
 
-export default QueuePage
+export default QueuePage;

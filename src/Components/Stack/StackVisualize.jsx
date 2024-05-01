@@ -39,14 +39,14 @@ const StackVisualize = () => {
     numberContainer.style.transition = 'none'; // Remove any existing transition
     numberContainer.style.display = 'block'; // Ensure the number container is visible
     numberContainer.style.transform = ''; // Reset any previous transform
-
+                     
     // Get the target element
     let targetElement = AllStackParent.firstElementChild;
     if (!targetElement) {
       console.log('nahi hai');
       targetElement = emptyStack;
     }
-
+        
     // Get the position of the target element
     const targetRect = targetElement.getBoundingClientRect();
 
