@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import MainContent from "../Components/Stack/MainContent";
 import "../Components/Stack/Style.css";
 
 const StackPage = () => {
+
+  
+  useEffect(() => {
+    document.title = 'Stack • DSA Visualization Online';
+  }, []);
   
   return (
     <>

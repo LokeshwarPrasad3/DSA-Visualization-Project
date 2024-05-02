@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { SelectOptionArrayInputTypes } from '../data/ArrayData';
 import {
@@ -9,6 +9,12 @@ import {
 import Docs from '../Components/Stack/Docs';
 
 const ArrayPage = () => {
+
+  useEffect(() => {
+    document.title = 'Array • DSA Visualization Online';
+  },[])
+
+
   // get size of array creation
   const [inputArraySize, setInputArraySize] = useState('');
   // type of array

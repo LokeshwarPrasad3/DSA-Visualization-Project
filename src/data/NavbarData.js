@@ -8,12 +8,12 @@ export const navigationListDataStructures = [
         name: "Stack",
     },
     {
-        route: "linked-list",
-        name: "Linked List",
-    },
-    {
         route: "queue",
         name: "Queue",
+    },
+    {
+        route: "linked-list",
+        name: "Linked List",
     },
     {
         route: "tree",

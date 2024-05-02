@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
 import QueueMainContent from '../Components/Queue/QueueMainContent';
 
 const QueuePage = () => {
+
+  
+  useEffect(() => {
+    document.title = 'Queue • DSA Visualization Online';
+  }, []);
+
   return (
     <>
       <div className="queue_container mt-10">
