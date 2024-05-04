@@ -1,7 +1,7 @@
-import './CSS/Navbar.css';
+import '../CSS/Navbar.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { navigationListDataStructures } from '../data/NavbarData';
+import { navigationListDataStructures } from '../../data/NavbarData';
 
 const Navbar = () => {
   // state which store current width of window

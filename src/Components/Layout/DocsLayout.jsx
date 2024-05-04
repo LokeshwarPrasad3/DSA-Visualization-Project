@@ -1,4 +1,4 @@
-import CodePreviewer from '../Groups/CodePreviewer';
+import CodePreviewer from '../ui/CodePreviewer';
 import { useState } from 'react';
 import { useRef } from 'react';
 import toast from 'react-hot-toast';

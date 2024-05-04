@@ -1,14 +1,13 @@
-import Navbar from './Components/Navbar';
-import WorkingHomePage from './Components/WorkingHomePage';
-import ArrayPage from './Pages/ArrayPage';
-import HomePage from './Pages/HomePage';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Navbar from './Components/Layout/Navbar';
+import WorkingHomePage from './Components/Layout/WorkingHomePage';
 import StackPage from './Pages/StackPage';
-import { Route, Routes } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import ArrayPage from './Pages/ArrayPage';
 import QueuePage from './Pages/QueuePage';
-import GraphPage from './Pages/GraphPage';
-import TreePage from './Pages/TreePage';
 import LinkedListPage from './Pages/LinkedListPage';
+import TreePage from './Pages/TreePage';
+import GraphPage from './Pages/GraphPage';
+import HomePage from './Pages/HomePage';
 
 function App() {
   const location = useLocation();
