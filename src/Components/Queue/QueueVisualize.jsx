@@ -6,16 +6,16 @@ const QueueVisualize = () => {
   const numberContainerRef = useRef(null);
   const inputRef = useRef(null);
   const AllQueueParentRef = useRef(null);
-  const emptyQueueRef = useRef(null);
+  // const emptyQueueRef = useRef(null);
   const numberPushAnimateStartRef = useRef(null);
   const noPopAnimationRef = useRef(null);
   const operationsDivRef = useRef(null);
 
   // ref current
   const numberPushAnimateStart = numberPushAnimateStartRef.current;
-  const noPopAnimation = noPopAnimationRef.current;
+  // const noPopAnimation = noPopAnimationRef.current;
   const AllQueueParent = AllQueueParentRef.current;
-  const operationsDiv = operationsDivRef.current;
+  // const operationsDiv = operationsDivRef.current;
 
   const [inputPushValue, setInputPushValue] = useState('');
   const [currentQueue, setCurrentQueue] = useState([]);
