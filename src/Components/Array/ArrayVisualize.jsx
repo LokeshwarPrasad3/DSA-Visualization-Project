@@ -44,6 +44,12 @@ const ArrayVisualize = () => {
       toast.error('Enter Valid Input!!');
       return;
     }
+
+    if (inputArraySize > 20) {
+      toast.error('Max 20 elements !!');
+      return;
+    }
+
     setToggleInputToText(true);
     const BasicArray = [];
     for (let i = 0; i < inputArraySize; i++) {
