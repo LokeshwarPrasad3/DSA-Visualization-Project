@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import QueueVisualize from '../Components/Queue/QueueVisualize';
 import DocsLayout from '../Components/Layout/DocsLayout';
 import {
   codeStringImplementation,

@@ -24,7 +24,6 @@ int main() {
 `;
 
 export const codeStringImplementation = `//🚀CODE IMPLEMENTATION
-//🚀CODE IMPLEMENTATION
 #include <iostream>
 
 using namespace std;
@@ -86,9 +85,7 @@ int main() {
 
 `;
 
-export const Documentation = `# Queue Overview
-
-# Linked List Overview
+export const Documentation = `# Linked List Overview
 
 A linked list is a linear data structure consisting of a sequence of elements, where each element points to the next one in the sequence. Unlike arrays, linked lists do not have a fixed size and allow for dynamic memory allocation.
 
