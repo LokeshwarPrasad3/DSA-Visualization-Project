@@ -64,7 +64,7 @@ const Navbar = () => {
         >
           <ul id="nav_ul">
             {navigationListDataStructures.map(({ route, name }) => (
-              <li key={name} className="nav_list pl-5">
+              <li key={name} className="nav_list pl-1">
                 <Link
                   onClick={toggleResNavbar}
                   className="nav_link hover:text-gray-300"
@@ -74,6 +74,17 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            {/* Github Code Button */}
+            <li className="nav_list pl-1">
+              <a
+                onClick={toggleResNavbar}
+                className="nav_link hover:text-gray-300"
+                target="_blank"
+                href="https://github.com/LokeshwarPrasad3/DSA-Visualization-Project"
+              >
+                <i className="ri-github-fill text-2xl"></i>
+              </a>
+            </li>
           </ul>
         </div>
         <div
