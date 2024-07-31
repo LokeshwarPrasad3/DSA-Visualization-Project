@@ -19,16 +19,16 @@ const MainViewPort = () => {
         </div>
         <div className="button_container flex justify-center mt-16">
           <a
-            href="https://github.com/LokeshwarPrasad3"
+            href="https://github.com/LokeshwarPrasad3/DSA-Visualization-Project"
             target="_blank"
-            className="cursor-pointer bg-transparent border border-slate-300 text-blue-500 px-6 py-2 rounded-md mr-4 hover:bg-slate-900 hover:text-white focus:outline-none"
+            className="cursor-pointer bg-transparent border border-slate-700 hover:border-slate-600 text-blue-200 px-6 py-2 rounded-md mr-4 bg-slate-900 hover:text-gray-100 focus:outline-none button_shadow"
           >
             GitHub Code
           </a>
           <a
             href="https://lokeshwar-creatives.netlify.app"
             target="_blank"
-            className="cursor-pointer bg-transparent border border-slate-300 text-blue-500 px-6 py-2 rounded-md hover:bg-slate-900 hover:text-white focus:outline-none"
+            className="cursor-pointer bg-transparent border border-slate-700 hover:border-slate-600 text-blue-200 px-6 py-2 rounded-md bg-slate-900 hover:text-gray-100 focus:outline-none button_shadow"
           >
             Creator
           </a>

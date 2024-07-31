@@ -10,6 +10,10 @@
   @apply px-3 bg-green-700 hover:bg-green-600 rounded transition-all duration-300 text-[1rem] border-none cursor-pointer;
 }
 
+.button_shadow {
+  box-shadow: 0 0 3px 1px rgb(56, 52, 23);
+}
+
 .flex-3 {
   @apply flex justify-center items-center;
 }
